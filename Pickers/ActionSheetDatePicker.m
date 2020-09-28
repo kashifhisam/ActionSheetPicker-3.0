@@ -164,6 +164,9 @@
     datePicker.calendar = self.calendar;
     datePicker.timeZone = self.timeZone;
     datePicker.locale = self.locale;
+    if (@available(iOS 14.0, *)) {
+        datePicker.preferredDatePickerStyle = UIDatePickerStyleWheels;
+    }
 
     // if datepicker is set with a date in countDownMode then
     // 1h is added to the initial countdown
